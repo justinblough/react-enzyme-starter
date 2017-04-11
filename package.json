@@ -1,0 +1,59 @@
+{
+  "name": "react-enzyme-starter",
+  "version": "0.1.0",
+  "description": "A React app starter template with Enzyme testing. Includes comments on React component practices.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinblough/react-enzyme-starter"
+  },
+  "author": [
+    {
+      "name": "Justin Blough",
+      "email": "jb@syntacticlabs.io",
+      "url": "https://github.com/justinblough"
+    }
+  ],
+  "license": "ISC",
+  "main": "src/app/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "test": "NODE_ENV=test mocha $(find src/app/ -name '*.spec.js' ! -ipath '*node_modules*')",
+    "test:watch": "npm run test -- --watch",
+    "dev": "NODE_ENV=development node_modules/.bin/webpack-dev-server --config config/webpack.dev.js",
+    "dist": "NODE_ENV=production webpack -p --config config/webpack.prod.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-airbnb": "^2.2.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "chai-jquery": "^2.0.0",
+    "css-loader": "^0.28.0",
+    "enzyme": "^2.8.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "jsdom": "^9.12.0",
+    "mocha": "^3.2.0",
+    "node-sass": "^4.5.2",
+    "prop-types": "^15.5.6",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.3",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.3",
+    "sinon": "^2.1.0",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "react": "^15.5.3"
+  }
+}
